@@ -32,7 +32,7 @@ RUN if test "${TARGETPLATFORM}" != 'linux/arm/v7'; then \
     else cp -r /opt/java/openjdk /javaruntime; \
     fi
 
-FROM openeuler/openeuler:22.03-lts-sp1
+FROM openeuler/openeuler:22.03-lts-sp2
 
 ARG user=jenkins
 ARG group=jenkins
