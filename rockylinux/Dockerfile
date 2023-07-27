@@ -88,6 +88,7 @@ RUN chmod a+xr -R $JAVA_HOME
 RUN echo "PATH=${PATH}" >> /etc/environment
 COPY setup-sshd /usr/local/bin/setup-sshd
 COPY sudo-user /etc/sudoers.d/sudo-user
+RUN rm -rvf /run/nologin
 
 EXPOSE 22
 
