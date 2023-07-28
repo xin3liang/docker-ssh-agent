@@ -32,7 +32,7 @@ RUN if test "${TARGETPLATFORM}" != 'linux/arm/v7'; then \
     else cp -r /opt/java/openjdk /javaruntime; \
     fi
 
-FROM rockylinux:8
+FROM rockylinux:9
 
 ARG user=jenkins
 ARG group=jenkins
