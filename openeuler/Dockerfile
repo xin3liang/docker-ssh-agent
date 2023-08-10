@@ -32,7 +32,8 @@ RUN if test "${TARGETPLATFORM}" != 'linux/arm/v7'; then \
     else cp -r /opt/java/openjdk /javaruntime; \
     fi
 
-FROM openeuler/openeuler:22.03-lts-sp2
+#FROM openeuler/openeuler:22.03-lts-sp2
+FROM openeuler/openeuler:20.03-lts-sp3
 
 ARG user=jenkins
 ARG group=jenkins
@@ -56,6 +57,7 @@ RUN dnf update -y \
         shadow \
         sudo \
         vim \
+	bc \
     && dnf clean all
 
 RUN groupadd -g ${gid} ${group} \
